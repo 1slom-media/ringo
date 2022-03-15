@@ -1,0 +1,188 @@
+.hero{
+    &__huge-container{
+        height: 687px;
+        @include bg ("../images/hero-bg-img.png",auto,center)
+    }
+
+    &__curtain{
+        height: 687px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%);
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading{
+        max-width: 446px;
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 67px;
+        text-align: center;
+        margin: 0;
+        margin-top: 120px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #FFFFFF;          
+    }
+
+    &__text{
+        max-width: 537px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px; 
+        text-align: center;
+        margin: 0;
+        margin-bottom: 50px;
+        color: #FFFFFF; 
+        opacity: 0.8;      
+    }
+
+    &__link{
+        display: inline-block;
+        text-decoration: none;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 22px 49px 22px 56px;
+        background-color: $main-brown;
+        color: #FFFFFF;       
+    }
+
+    &__line{
+        background-color: #ffffff;
+        opacity: 0.4;
+        height: 1px;
+        margin-top: 120px;
+    }
+
+    &__buttons{
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .button{
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__left-arrow{
+        border: none;
+        width: 20px;
+        height: 20px;
+        margin-right: 25px;
+        @include bg ("../images/leftarrow.svg",auto,center)
+    }
+
+    &__right-arrow{
+        border: none;
+        width: 20px;
+        height: 20px;
+        @include bg ("../images/rightarrow.svg",auto,center)
+    }
+
+    &__number-button{
+        width: 32px;
+        height: 32px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: #FFFFFF;
+        opacity: 0.3;
+        margin-right: 15px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &-active{
+            opacity: 1;
+        }
+                
+    }
+}
+
+@media only screen and(max-width:1000px){
+    .hero{
+    }                 
+}
+
+@media only screen and(max-width:640px){
+    .hero{
+    }                 
+}
+
+@media only screen and(max-width:320px) {
+    .hero{
+        padding-bottom: 80px;
+
+        &__huge-container{
+            height: 495px;
+            max-width: 100%;
+            @include bg ("../images/hero-bg-img.png",cover,center center)
+        }
+    
+        &__curtain{
+            height: 500px;
+        }
+    
+        &__heading{
+            max-width: 296px;
+            font-size: 28px;
+            line-height: 33.6px;
+            margin-top: 65px;
+            margin-bottom: 25px;
+        }
+    
+        &__text{
+            max-width:300px;
+            font-size: 16px;
+            line-height: 23.2px; 
+            margin-bottom: 25px;      
+        }
+    
+        &__link{
+            padding: 22px 50px;      
+        }
+    
+        &__line{
+            margin-top: 60px;
+        }
+    
+        &__buttons{
+            margin-top: 10px;
+        }
+    
+    
+        &__left-arrow{
+            display: none;
+        }
+    
+        &__right-arrow{
+            display: none;
+        }
+    
+        &__number{
+            margin: 0 auto;   
+        }
+    }
+
+    
+}
